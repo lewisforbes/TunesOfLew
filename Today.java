@@ -13,7 +13,7 @@ import java.util.Random;
 public class Today {
     private final SpotifyApi spotifyApi = PublicSpotifyCreds.getAPIWithToken();
 
-    private final String addedTracksID = "76Vro891V9PIJLV6FrRxck"; // the playlist where the chosen tracks are added to
+    private final String addedTracksID = "76Vro891V9PIJLV6FrRxck";
     private final Track[] tracksAdded = getTracksFromPlayList(addedTracksID);
 
     private final Random rand = new Random();
@@ -56,12 +56,13 @@ public class Today {
     public String getArtistsNamesString() {
         String[] artistsNames = getArtistsNames();
         String output = artistsNames[0];
-        if (artistsNames.length == 0) {
+        if (artistsNames.length == 1) {
             return output;
         }
-        for (int i=1; i<artistsNames.length; i++) {
+        for (int i=1; i<artistsNames.length-1; i++) {
             output += ", " + artistsNames[i];
         }
+        output += " and " + artistsNames[artistsNames.length-1];
         return output;
     }
 

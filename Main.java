@@ -33,12 +33,15 @@ public class Main {
         switch (dayOfMonthStr.charAt(dayOfMonthStr.length() - 1)) {
             case '1':
                 suffix = "st";
+                break;
 
             case '2':
                 suffix = "nd";
+                break;
 
             case '3':
                 suffix = "rd";
+                break;
 
             default:
                 suffix = "th";
