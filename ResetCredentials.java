@@ -12,13 +12,17 @@ import java.util.Scanner;
 
 public class ResetCredentials {
 
-    private static final String clientId = "<yours>";
-    private static final String clientSecret = "<yours>";
-    private static final URI redirectUri = SpotifyHttpManager.makeUri("https://lewisforbes.com/");
+    private static final String clientId = "<your client ID>";
+    private static final String clientSecret = "<your secret client ID>";
+    private static final URI redirectUri = SpotifyHttpManager.makeUri("<any site added on Spotify API Console>");
 
     private static SpotifyApi api = new SpotifyApi.Builder().setClientId(clientId).setClientSecret(clientSecret).setRedirectUri(redirectUri).build();
 
     public static void main(String args[]) {
+        Scanner precaution = new Scanner(System.in);
+        System.err.println("PRESS ENTER IF YOU'RE SURE YOU WANNA RESET THE CREDENTIALS.");
+        String tmp = precaution.nextLine();
+
         api = makeNewCreds(api, mkCode());
         System.out.println("Refresh token: " + api.getRefreshToken());
     }

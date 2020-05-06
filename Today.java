@@ -113,7 +113,12 @@ public class Today {
     private String choosePlaylistID() {
         final ArrayList<String> playlistIDs = new ArrayList<>(Arrays.asList(
                 "37i9dQZF1E35BpvnMmO59L", // Daily Mix 1
-                "37i9dQZF1E362JpMcmH2iO")); // Daily Mix 2
+                "37i9dQZF1E362JpMcmH2iO", // Daily Mix 2
+                "37i9dQZF1E35fElQOnEqTY", // Daily Mix 3
+                "37i9dQZF1E39di7JkwfX7I", // Daily Mix 4
+                "37i9dQZF1E35CasSe4M3oh", // Daily Mix 5
+                "37i9dQZF1E3aaGzad3dT5f"  // Daily Mix 6
+                ));
         return playlistIDs.get(rand.nextInt(playlistIDs.size()));
     }
 
