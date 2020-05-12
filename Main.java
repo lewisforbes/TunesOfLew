@@ -47,6 +47,10 @@ public class Main {
                 suffix = "th";
         }
 
+        if (dayOfMonth>=10 && dayOfMonth<=20) {
+            suffix = "th";
+        }
+
         String[] monthName = {"January", "February",
                 "March", "April", "May", "June", "July",
                 "August", "September", "October", "November",
